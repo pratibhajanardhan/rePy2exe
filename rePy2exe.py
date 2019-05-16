@@ -84,27 +84,27 @@ def pyc2py():
         new = raw_input("Type a name to save your .py: ")
         clear()
         heading()
-        print ' '
+        print(' ')
         sys.stdout.write(YELLOW + ' [*] Working : ' + END + str(s))
         os.popen('./pycdc/pycdc ' + s + ' >> ' + new + '.py')
-        print ' '
+        print(' ')
         time.sleep(3)
         clear()
         heading()
-        print ' '
-        print 'Everything is OK!'
+        print(' ')
+        print('Everything is OK!')
         sys.stdout.write(GREEN + ' [*] Done : ' + END + cwd + '/' + str(new) + '.py')
-        print ' ' 
+        print(' ') 
         sys.exit(0)
     else:
-        print ' '
+        print(' ')
         sys.stdout.write(RED + ' [!] File not found : ' + END + str(s))
-        print ' '
-        print ' '
+        print(' ')
+        print(' ')
         enter = raw_input("Press any key to return ")
         clear()
         heading()
-        print ' '
+        print(' ')
 
 def exe2py():
     cwd = str(os.getcwd())
@@ -114,11 +114,11 @@ def exe2py():
     if check == True:
         clear()
         heading()
-        print ' '
+        print(' ')
         os.popen('python unpy2exe.py ' + s)
         clear()
         heading()
-        print ' '
+        print(' ')
         new = raw_input("Type a name to save your .py: ")
         os.popen('./pycdc/pycdc ' + 'single.py.pyc' + ' >> ' + new + '.py')
         clear()
