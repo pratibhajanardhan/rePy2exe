@@ -180,7 +180,6 @@ def main():
         pass
 
     else:
-	heading()
 	print(' ')
         sys.stdout.write(YELLOW + ' [*] NotFound : ' + END + 'pycdc')
 	print(' ')
