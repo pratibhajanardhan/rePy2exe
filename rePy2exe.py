@@ -53,27 +53,27 @@ def exe2pyc():
         cwd = str(os.getcwd())
         clear()
         heading()
-        print ' '
-        print 'Processing the EXEcutable...'
+        print(' ')
+        print('Processing the EXEcutable...')
         sys.stdout.write(YELLOW + ' [*] Working : ' + END + cwd + '/' + str(s))
-        print ' '
+        print(' ')
         time.sleep(5)
         clear()
         heading()
-        print ' '
-        print 'Everything is OK!'
+        print(' ')
+        print('Everything is OK!')
         sys.stdout.write(GREEN + ' [*] Done : ' + END + cwd + '/' + c + '.py.pyc')
-        print ' ' 
+        print(' ')
         sys.exit(0)
     else:
-        print ' '
+        print(' ')
         sys.stdout.write(RED + ' [!] File not found : ' + END + str(s))
-        print ' '
-        print ' '
+        print(' ')
+        print(' ')
         enter = raw_input("Press any key to return ")
         clear()
         heading()
-        print ' '
+        print(' ')
 
 def pyc2py():
     cwd = str(os.getcwd())
@@ -123,27 +123,27 @@ def exe2py():
         os.popen('./pycdc/pycdc ' + 'single.py.pyc' + ' >> ' + new + '.py')
         clear()
         heading()
-        print ' '
+        print(' ')
         sys.stdout.write(YELLOW + ' [*] Working : ' + END + str(s))
-        print ' '
+        print(' ')
         time.sleep(3)
         clear()
         heading()
-        print ' '
-        print 'Everything is OK!'
+        print(' ')
+        print('Everything is OK!')
         sys.stdout.write(GREEN + ' [*] Done : ' + END + cwd + '/' + str(new) + '.py')
         os.popen('rm -Rf single.py.pyc')
-        print ' '
+        print(' ')
         sys.exit(0)
     else:
-        print ' '
+        print(' ')
         sys.stdout.write(RED + ' [!] File not found : ' + END + str(s))
-        print ' '
-        print ' '
+        print(' ')
+        print(' ')
         enter = raw_input("Press any key to return ")
         clear()
         heading()
-        print ' '
+        print(' ')
         
 def updater():
     os.system('python2.7 updater.py')
@@ -181,67 +181,67 @@ def main():
 
     else:
 	heading()
-	print ' '
+	print(' ')
         sys.stdout.write(YELLOW + ' [*] NotFound : ' + END + 'pycdc')
-	print ' '
+	print(' ')
 	choice = raw_input('Dependencies not found, want clone it? (y/n)')
 	if choice == 'y':
 		clear()
-		print '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
-		print ' [*] Searching Cmake...'
-		print '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
-		print '                              '
+		print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+		print(' [*] Searching Cmake...')
+		print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+		print('                              ')
 		abc = os.system('which cmake')
 		if abc == 256:
 			clear()
 			heading()
-			print ' '
+			print(' ')
 			sys.stdout.write(YELLOW + ' [*] Searching Cmake : ' + END + RED + 'Not Found' + END)
-			print ' '
-			print ' '
-			print '   Please install it :     https://cmake.org      '
-			print '  -> apt-get install cmake -y'
+			print(' ')
+			print(' ')
+			print('  Please install it :     https://cmake.org      ')
+			print('  -> apt-get install cmake -y')
 			sys.exit(0)
 		else:
 			print "OK"
-		print '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
-		print ' [*] Cloning Dependencies...'
-		print '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
-		print '                              '
+		print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+		print(' [*] Cloning Dependencies...')
+		print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+		print('                              ')
         	os.popen('git clone https://github.com/4w4k3/pycdc.git')
 		clear()
-		print '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
-		print ' [*] Compiling Dependencies...'
-		print '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
-		print '                              '
+		print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+		print(' [*] Compiling Dependencies...')
+		print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+		print('                              ')
 		os.system('cd pycdc && cmake ../pycdc/ && make')
 	elif choice == 'Y':
-		print '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
-		print ' [*] Searching Cmake...'
-		print '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
-		print '                              '
+		print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+		print(' [*] Searching Cmake...')
+		print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+		print('                              ')
 		abc = os.system('which cmake')
 		if abc == 256:
 			clear()
 			heading()
-			print ' '
+			print(' ')
 			sys.stdout.write(YELLOW + ' [*] Searching Cmake : ' + END + RED + 'Not Found' + END)
-			print ' '
-			print ' '
-			print '   Please install it :     https://cmake.org      '
+			print(' ')
+			print(' ')
+			print('   Please install it :     https://cmake.org      ')
 			sys.exit(0)
 		else:
 			print "OK"
-		print '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
-		print ' [*] Cloning Dependencies...'
-		print '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
-		print '                              '
+		print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+		print(' [*] Cloning Dependencies...')
+		print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+		print('                              ')
         	os.popen('git clone https://github.com/4w4k3/pycdc.git')
 		clear()
-		print '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
-		print ' [*] Compiling Dependencies...'
-		print '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
-		print '                              '
+		print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+		print(' [*] Compiling Dependencies...')
+		print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+		print('                              ')
 		os.system('cd pycdc && cmake ../pycdc/ && make')
 	else:
 		sys.exit(0)
@@ -264,7 +264,7 @@ def main():
 		pp()
 
 		print('\t{0} And that\'s all, folks. xD').format(YELLOW, RED, YELLOW, WHITE)
-		print '**************************************************'
+		print('**************************************************')
                 raise SystemExit
             elif choice == '1':
                 exe2py()
@@ -278,18 +278,18 @@ def main():
 		updater()		
             else:
 	 	clear()
-		print 'Invalid Option'
+		print('Invalid Option')
 		time.sleep(1)
 		clear()
 		heading()
-		print ' '
+		print(' ')
 
     except KeyboardInterrupt:
 	clear()
 	pp()
 
 	print('\t{0} And that\'s all, folks. xD').format(YELLOW, RED, YELLOW, WHITE)
-	print '**************************************************'
+	print('**************************************************')
 
 if __name__ == '__main__':
 
